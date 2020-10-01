@@ -4,7 +4,12 @@ library(glue)
 library(rvest)
 library(ggplot2)
 
-data_url <- xml2::read_html('https://www.arcgis.com/sharing/rest/content/items/d8a2d1912b8b4ee19ff76aa892414e59/data') %>% 
+mapview_url <- xml2::read_html('https://www.arcgis.com/sharing/rest/content/items/47574f7a6e454dc6a42c5f6912ed7076/data') %>% 
+  html_text() %>% 
+    str_extract('(?<="mapItemId":").*(?=","proxyItems")')
+
+
+data_url <- xml2::read_html(glue('https://www.arcgis.com/sharing/rest/content/items/{mapview_url}/data')) %>% 
   html_text() %>% 
   str_extract('https://services1.arcgis.com.*MSOA.*FeatureServer/0')
 
