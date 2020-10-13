@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 covid19_mapping.Rproj
+census_2011/
+geo/
+demogs/

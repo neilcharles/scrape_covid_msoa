@@ -12,19 +12,24 @@ msoa_coords <- tibble(msoa11cd = msoa$msoa11cd,
                       lat = msoa_coords[, 2],
                       lon = msoa_coords[, 1])
 
-msoa_coords2 <- msoa %>% 
-  left_join(covid_cases) %>% 
-  filter(cases_count > 0) %>% 
-  mutate(sample_points = map(.x = geometry, .y = cases_count, .f = ~sf::st_sample(.x, .y)))
-
-
-test <- msoa_coords2 %>% 
+msoa_coords_sampled <- msoa %>%
+  left_join(covid_cases) %>%
+  filter(cases_count > 0) %>%
+  mutate(
+    sample_points = map(
+      .x = geometry,
+      .y = cases_count,
+      .f = ~
+        sf::st_sample(.x, .y) %>%
+        sf::st_coordinates()
+    )
+  ) %>% 
   sf::st_drop_geometry() %>% 
   select(msoa11cd, sample_points) %>% 
   unnest(cols = sample_points)
 
-sf::st_sample(msoa[1,]$geometry, 100)
-
+msoa_coords_sampled$lon <- msoa_coords_sampled$sample_points[,1]
+msoa_coords_sampled$lat <- msoa_coords_sampled$sample_points[,2]
 
 covid_cases_geo <- covid_cases %>%
   left_join(msoa_coords) %>%

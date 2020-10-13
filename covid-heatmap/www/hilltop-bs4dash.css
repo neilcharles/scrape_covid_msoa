@@ -1,0 +1,36 @@
+body {
+	font-family: "ITC Franklin Gothic W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*[class*="light-primary"] {
+  background-color: #FE8A02;
+}
+*/
+
+.nav-link.active {
+  background-color: #FE8A02 !important;
+}
+
+a {
+  color: #FE8A02;
+}
+
+label {
+  font-weight: 100 !important;
+  font-size: 90%;
+}
+
+.btn {
+  font-weight: 100 !important;
+  font-size: 90%;
+}
+
+.form-control {
+  font-weight: 100 !important;
+  font-size: 90%;
+}
+
+/*Skinning for use with no menu*/
+.main-footer {
+	margin-left: 0 !important;
+}

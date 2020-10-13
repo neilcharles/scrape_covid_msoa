@@ -1,0 +1,2 @@
+https://coronavirus.data.gov.uk/about-data#cases-by-lower-super-output-area-lsoa
+https://coronavirus.data.gov.uk/downloads/lsoa_data/LSOAs_latest.csv

@@ -1,0 +1,167 @@
+body {
+	font-family: "ITC Franklin Gothic W01", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-header .logo {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #39424D !Important;
+}
+
+.skin-blue .main-header .logo {
+	background-color: white;
+	border: 1px solid transparent !Important;
+	border-width: 0 0 1px !Important;
+	border-color: #FE8A02 !Important;
+}
+
+/* logo when hovered */
+.skin-blue .main-header .logo:hover {
+	background-color: white;
+}
+
+/* navbar (rest of the header) */
+.skin-blue .main-header .navbar {
+	background-color: white;
+	border: 1px solid transparent !Important;
+	border-width: 0 0 1px !Important;
+	border-color: #FE8A02 !Important;
+}
+
+/* Collapsible menus */
+.skin-blue .treeview-menu>li>a {
+	color: rgb(89,89,89) !Important;
+	background-color: rgb(249,249,249);
+}
+
+.skin-blue .treeview-menu>li.active>a, .skin-blue .treeview-menu>li>a:hover {
+	background-color: rgb(217,217,217);
+}
+
+
+
+/* Three bar mini menu */
+.skin-blue .main-header .navbar .sidebar-toggle {
+	color: #FE8A02;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+	background-color: #FE8A02;
+}
+
+/* Sidebar Formatting */
+.skin-blue .main-sidebar {
+	background-color: rgb(191,191,191);
+}
+
+/* Sidebar menu highlight */
+.skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li:hover>a {
+	border-left-color: #FE8A02;
+}
+
+/* Override primary borders to set dark blue */
+.box.box-primary {
+	border-top-color: #39424D;
+}
+
+.box.box-solid.box-primary{
+	border: 1px solid #39424D;
+}
+
+.box.box-solid.box-primary>.box-header {
+	background: #394962;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active {
+	border-top-color: #39424D;
+}
+
+/* Override warning border to set MediaCom orange */
+.box.box-warning {
+	border-top-color: rgb(236,122,8);
+}
+
+/* Bootstrap buttons etc. formatting */
+
+/* Square dropdowns */
+.selectize-input {
+	border-radius: 0px
+}
+
+/* Left menu */
+
+.skin-blue .sidebar a {
+	color: rgb(89,89,89);
+}
+
+.skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li:hover>a {
+	color: black;
+}
+
+.skin-blue .left-side, .skin-blue .main-sidebar, .skin-blue .wrapper {
+	background-color: white;
+}
+
+.skin-blue .main-sidebar {
+	-webkit-box-shadow: 4px 1px 12px 0px rgba(0,0,0,0.59);
+	-moz-box-shadow: 4px 1px 12px 0px rgba(0,0,0,0.59);
+	-box-shadow: 4px 0px 12px 0px rgba(0,0,0,0.4);
+}
+
+.skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li:hover>a {
+	color: rgb(89,89,89);
+	background: rgb(217,217,217);
+}
+
+	
+.sidebar {
+	color: rgb(89,89,89);
+}
+
+hr {
+	border-top: 1px solid #FE8A02;	
+}
+
+.tab-pane {
+	margin-top: 10px;
+}
+
+/* Sliders */
+
+.irs-bar, .irs-bar-edge {
+	border: rgb(191,191,191);
+	border-top: 1px solid rgb(191,191,191);
+	border-bottom: 1px solid rgb(191,191,191);
+	background: rgb(191,191,191);
+}
+
+.irs-from, .irs-to, .irs-single {
+	background: rgb(191,191,191);
+	color: rgb(89,89,89);
+}
+
+.btn {
+	border-radius: 0px;
+	margin-left: 10px;
+}
+
+h5 {
+	margin-left: 12px;
+	color: rgb(89,89,89)
+}
+
+div.busy { 
+  /*position:absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -50px;
+  display:none;*/
+  background-color: rgba(236, 240, 245, 0.5);
+  /*text-align: center;
+  padding-top: 20px;
+  padding-left: 30px;*/
+  padding-bottom: 40px;
+  /*padding-right: 30px;
+  border-radius: 5px;*/
+}
+
